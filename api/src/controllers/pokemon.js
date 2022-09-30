@@ -5,8 +5,14 @@ const getPokemons= async (req,res)=>{
         const {name} = req.query
 
         if(name){
-            const pokemon = await pokeSchema.find({ name: name });
-            return res.status(200).json(pokemon)
+            const pokemon = await pokeSchema.find();
+            const poke= pokemon.filter(e => e.name.toLowerCase().includes(name.toLowerCase()))
+            if(poke){
+                return res.status(200).json(poke)
+            }else{
+                return res.status(404).json({error: "Nombre invalido"})
+            }
+            
         }else{
             const pokemons = await pokeSchema.find()
             return res.status(200).json(pokemons)
@@ -32,11 +38,11 @@ const getPokemonsDetail = async(req,res) =>{
 
 const postPokemons = async(req,res) =>{
     try {
-        const {id,name,vida,ataque,defensa,velocidad,altura,peso, img, types}= req.body;
-        if(!id || !name ||!vida || !ataque || !defensa ||!velocidad ||!altura ||!peso ||!img ||!types){
+        const {name,vida,ataque,defensa,velocidad,altura,peso, img, types}= req.body;
+        if( !name ||!vida || !ataque || !defensa ||!velocidad ||!altura ||!peso ||!img ||!types){
             return res.status(404).json({error: "No hay suficientes datos"})
         }
-
+        let id=Math.floor((Math.random() * (2000000000 - 1000 + 1)) + 1000)
         const pokemon = await pokeSchema({id,name,vida,ataque,defensa,velocidad,altura,peso,img,types});
         const createPokemon = await pokemon.save()
 
@@ -47,7 +53,29 @@ const postPokemons = async(req,res) =>{
     }
 }
 
+const deletePokemons=async(req,res)=>{
+    const { id } = req.params;
+
+    try {
+        if(!id)return res.send("No ID was sent.")
+
+        await pokeSchema.findByIdAndDelete(id, function (err, pokemon) {
+            if (err){
+                console.log(err)
+            }
+            else{
+                console.log("Deleted : ", pokemon); 
+            }
+        });
+        res.status(200).json({success:"Your pokemon was deleted successfully."})
+    } catch (error) {
+        res.status(404).json({error:error.message})
+    }
+}
+
 module.exports={
     getPokemons,
-    getPokemonsDetail
+    getPokemonsDetail,
+    postPokemons,
+    deletePokemons
 }
