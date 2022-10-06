@@ -151,7 +151,7 @@ const initialState = {
                 pokemon: action.payload
             }
         case ELIMINATE:
-            let pokes= state.auxPokemons.filter(pokemon=> pokemon._id !== action.payload);
+            let pokes= state.allPokemons.filter(pokemon=> pokemon._id !== action.payload);
             let pokemonsIn=[];
             let pa=0;
             for (let i = 0; i < 9; i++) {
