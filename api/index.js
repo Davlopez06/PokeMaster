@@ -2,7 +2,7 @@ const server = require('./src/app')
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-const port = 3001
+const port = 10000
 
 //mongodb connection
 mongoose
