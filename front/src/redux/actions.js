@@ -92,6 +92,7 @@ export const deletePokemon=(id)=>(dispatch)=>{
         text: "You clicked the button!",
         icon: "success",
       });
+      window.location.reload(false);
     })
 
 }
