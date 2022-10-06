@@ -50,7 +50,7 @@ El contenido de `client` fue creado usando: Create React App.
 
 ## Enunciado
 
-La idea general es crear una aplicación en la cual se puedan ver los distintos Pokemon utilizando la api externa [pokeapi](https://pokeapi.co/) y a partir de ella poder, entre otras cosas:
+La idea general es crear una aplicación en la cual se puedan ver los distintos Pokemon:
 
 - Buscar pokemons
 - Filtrarlos / Ordenarlos
