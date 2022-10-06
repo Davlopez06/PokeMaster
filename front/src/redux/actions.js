@@ -13,7 +13,7 @@ export const CLEAN="CLEAN"
 export const getAllTypes = () => (dispatch) => {
     // Tu código acá
     return axios.get(
-      'http://localhost:3001/types'
+      'https://pokemasterapi.onrender.com/types'
       )
       .then(res=>res.data)
       .then(json => {
@@ -24,7 +24,7 @@ export const getAllTypes = () => (dispatch) => {
 
 export const getAllPokemons=()=>(dispatch)=>{
     return axios.get(
-        'http://localhost:3001/pokemons'
+        'https://pokemasterapi.onrender.com/pokemons'
         )
         .then(res=>res.data)
         .then(json => {
@@ -47,7 +47,7 @@ export const filter=(type)=>(dispatch)=>{
 
 export const search=(name)=>(dispatch)=>{
   return axios.get(
-    `http://localhost:3001/pokemons?name=${name}`
+    `https://pokemasterapi.onrender.com/pokemons?name=${name}`
     )
     .then(res=>res.data)
     .then(json => {
@@ -58,7 +58,7 @@ export const search=(name)=>(dispatch)=>{
 
 export const getPokemon=(id)=>(dispatch)=>{
   return axios.get(
-    `http://localhost:3001/pokemons/${id}`
+    `https://pokemasterapi.onrender.com/pokemons/${id}`
     )
     .then(res=>res.data)
     .then(json => {
@@ -73,7 +73,7 @@ export const cleanPokemon=()=>(dispatch)=>{
 
 export const deletePokemon=(id)=>(dispatch)=>{
   return axios.delete(
-    `http://localhost:3001/pokemons/${id}`
+    `https://pokemasterapi.onrender.com/pokemons/${id}`
     )
     .then(()=>{
       swal({
@@ -98,7 +98,7 @@ export const deletePokemon=(id)=>(dispatch)=>{
 export const createPokemon=(data)=>(dispatch)=>{
   console.log(data)
   axios.post(
-    `http://localhost:3001/pokemons`,data
+    `https://pokemasterapi.onrender.com/pokemons`,data
     )
     .then(()=>{
       swal({
