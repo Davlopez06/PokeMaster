@@ -151,7 +151,25 @@ const initialState = {
                 pokemon: action.payload
             }
         case ELIMINATE:
-            
+            let pokes= state.auxPokemons.filter(pokemon=> pokemon._id !== action.payload);
+            let pokemonsIn=[];
+            let pa=0;
+            for (let i = 0; i < 9; i++) {
+                if(pokes[i]){
+                    pokemonsIn.push(pokes[i])
+                }
+            }
+            if(pokes.length % 9===0){
+                pa=pokes.length/9
+            }else{
+                pa=Math.floor(pokes.length/9)+1
+            }
+            return{
+                ...state,
+                pokemons:pokemonsIn,
+                allPokemons: pokes,
+                pages: pa
+            }
         default: return state
     }
   };

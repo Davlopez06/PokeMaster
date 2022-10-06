@@ -83,8 +83,8 @@ export const deletePokemon=(id)=>(dispatch)=>{
       });
       window.location.reload(false);
     })
-    .then((res)=>{
-      dispatch({type: ELIMINATE, payload: res.data})
+    .then(()=>{
+      dispatch({type: ELIMINATE, payload: id})
     })
     .catch((error)=>{
       swal({
