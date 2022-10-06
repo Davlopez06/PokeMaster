@@ -84,6 +84,7 @@ export const deletePokemon=(id)=>(dispatch)=>{
     })
     .then((res)=>{
       dispatch({type: ELIMINATE, payload: res.data})
+      window.location.reload(false);
     })
     .catch((error)=>{
       swal({
@@ -106,6 +107,7 @@ export const createPokemon=(data)=>(dispatch)=>{
         text: "You clicked the button!",
         icon: "success",
       });
+      window.location.reload(false);
     })
     .catch((error)=>{
       swal({
