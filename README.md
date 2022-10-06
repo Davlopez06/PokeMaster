@@ -1,7 +1,7 @@
 
 # Individual Project -Pokemon
 
-<img height="150" src="./pokemon.png" />
+<img height="150" src="./pokeball.png" />
 
 ## Objetivos del Proyecto
 
