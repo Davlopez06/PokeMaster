@@ -81,10 +81,10 @@ export const deletePokemon=(id)=>(dispatch)=>{
         text: "You clicked the button!",
         icon: "success",
       });
+      window.location.reload(false);
     })
     .then((res)=>{
       dispatch({type: ELIMINATE, payload: res.data})
-      window.location.reload(false);
     })
     .catch((error)=>{
       swal({
