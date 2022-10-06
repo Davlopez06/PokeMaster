@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
-import { deletePokemon, getPokemon } from "../../redux/actions";
+import { cleanPokemon, deletePokemon, getPokemon } from "../../redux/actions";
 import NavbarDeCre from "../Navbar/NavbarDeCre";
 import css from "./Detail.module.css"
 import Grid from '@mui/material/Grid';
@@ -25,6 +25,7 @@ const Detail=()=>{
         console.log(pokemon)
     },[pokemon])
     if(home){
+        dispatch(cleanPokemon());
         return navegate("/home")
     }else{
     return(

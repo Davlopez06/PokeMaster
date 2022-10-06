@@ -19,7 +19,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { useDispatch } from "react-redux";
-import { search } from "../../redux/actions";
+import { cleanPokemon, search } from "../../redux/actions";
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -91,6 +91,7 @@ const NavbarDeCre=()=>{
     };
 
     if(home){
+        dispatch(cleanPokemon())
         return navegate("/home");
     }else{
     return(

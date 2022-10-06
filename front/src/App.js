@@ -7,6 +7,7 @@ import Filter from './components/Filter/Filter';
 import Pokemons from './components/Pokemons/Pokemons';
 import Detail from './components/Detail/Detail';
 import Create from './components/Create/Create';
+import Error from './components/Error/Error';
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
         <Route exact path="/home" element={<Home/>}/>
         <Route exact path="/pokemons" element={<Pokemons/>}/>
         <Route exact path="/detail/:id" element={<Detail/>}/> 
-        <Route exact path="/create" element={<Create/>}/>    
+        <Route exact path="/create" element={<Create/>}/>   
+        <Route path='*' element={<Error/>}/> 
       </Routes>
     </div>
   );

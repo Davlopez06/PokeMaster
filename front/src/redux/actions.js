@@ -67,6 +67,7 @@ export const getPokemon=(id)=>(dispatch)=>{
 }
 
 export const cleanPokemon=()=>(dispatch)=>{
+  console.log("Limpia")
   return dispatch({type: CLEAN, payload: {}})
 }
 

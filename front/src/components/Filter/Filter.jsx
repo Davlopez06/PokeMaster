@@ -70,25 +70,6 @@ const Filter=()=>{
                 </ListItemButton>
             </List>
 
-
-        <List className={css.year}
-        sx={{ width: '100%', maxWidth: 300, bgcolor: 'background.paper' }}
-        component="nav"
-        aria-labelledby="nested-list-subheader"
-        subheader={
-        <ListSubheader component="div" id="nested-list-subheader" className={css.red}>
-              Order by Create
-        </ListSubheader>
-        }
-        >
-        <ListItemButton className={css.redH} onClick={()=>handleCreate("Create")}>
-         <ListItemText primary= " Create "  />
-        </ListItemButton>
-        <ListItemButton className={css.redH} onClick={()=>handleApi("Api")}>
-          <ListItemText primary= " Api "/>
-        </ListItemButton>
-        </List>
-
         <List className={css.year}
         sx={{ width: '100%', maxWidth: 300, bgcolor: 'background.paper' }}
         component="nav"

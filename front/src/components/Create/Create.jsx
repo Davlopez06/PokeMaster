@@ -60,12 +60,12 @@ const Create=()=>{
     function handleSubmit(e) {
         console.log("Entra")
         console.log(input)
-        if(!input.name || !input.vida || !input.ataque || !input.defensa || !input.velocidad || !input.altura || !input.peso || ! input.types) {
+        if(!input.name || !input.vida || !input.ataque || !input.defensa || !input.velocidad || !input.altura || !input.peso || ! input.types.length) {
             e.preventDefault()
             swal({
                 icon: "error",
                 title: "Ohhh!",
-                text: "Plis check and complete the field with *",
+                text: "Plis check and complete all fields",
                 confirmButtonText: "Ok",
                 confirmButtonColor: "#0b132b"
             });
