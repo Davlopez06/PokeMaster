@@ -1,0 +1,42 @@
+.content{
+    display: block;
+    background: #f8f8f9!important;
+    color: #0b132b !important;
+    width: 100%;
+    max-width: 100% !important;
+}
+.rating{
+    
+    background: black!important;
+    color: white!important;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.year{
+    background: black!important;
+    color: white !important;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100% !important;
+}
+.red{
+    background: black!important;
+    color: white !important;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 100% !important;
+}
+.redH{
+    background: #f8f8f9!important;
+    color: #0b132b !important;
+}
+
+.redH:hover{
+    background: white !important;
+    color: black !important;
+}

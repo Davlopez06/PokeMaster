@@ -29,7 +29,7 @@ const getPokemonsDetail = async(req,res) =>{
         if(!id){
             return res.status(404).json({error: "No hay id"})
         }
-        const pokemon = await pokeSchema.find({ id: id });
+        const pokemon = await pokeSchema.find({ _id: id });
         return res.status(200).json(pokemon)
     } catch (error) {
         return res.status(404).json({error:error})
@@ -67,9 +67,9 @@ const deletePokemons=async(req,res)=>{
                 console.log("Deleted : ", pokemon); 
             }
         });
-        res.status(200).json({success:"Your pokemon was deleted successfully."})
+        return res.status(200).json({success:"Your pokemon was deleted successfully."})
     } catch (error) {
-        res.status(404).json({error:error.message})
+        return res.status(404).json({error:error.message})
     }
 }
 

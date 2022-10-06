@@ -1,0 +1,17 @@
+.nofound{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.message{
+    font-size: 5vw !important;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    margin: 2vw;
+    margin: 0 auto !important;
+    text-align: center;
+    width: 100%;
+}

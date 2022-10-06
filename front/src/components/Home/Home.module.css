@@ -1,0 +1,22 @@
+.filtro{
+    width: 100% !important;
+    max-width: 100% !important;
+}
+.home{
+    background-image: url("../../img/Home.png") !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.paginate{
+    background: white !important;
+    width: 38%;
+    margin: 0 auto !important;
+    margin-bottom: 2vh !important;
+}
+
+.pagina{
+    margin: 0 auto !important;
+    justify-content: center !important;
+    margin-bottom: 2vh !important;
+}
