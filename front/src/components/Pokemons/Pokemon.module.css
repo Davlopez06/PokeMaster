@@ -15,8 +15,8 @@
     color: black;
 }
 .img{
-    width: 100% !important;
-    height: 70% !important;
+    max-width: 100% !important;
+    max-height: 70% !important;
     margin: 0 auto !important;
 }
 .type{
