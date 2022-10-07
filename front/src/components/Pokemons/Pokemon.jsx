@@ -12,12 +12,14 @@ const Pokemon=(props)=>{
     return(
         <Link className={css.decoration} to={`/detail/${props.id}`}>
         <Card className={css.card}>
+            <div className={css.ima}>
             <CardMedia
                 component="img"
                 image={props.image}
                 alt={props.image}
                 className={css.img}
             />
+             </div>
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                 {props.name}

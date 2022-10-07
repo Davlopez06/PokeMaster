@@ -27,6 +27,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Home=()=>{
     const dispatch=useDispatch()
     const pokemons=useSelector(state=>state.pokemons)
+    const allPokemons=useSelector(state=>state.allPokemons)
     const [page, setPages] = React.useState(1);
     const paginate=useSelector(state=>state.pages)
     const handleChange = (event, value) => {
@@ -39,6 +40,9 @@ const Home=()=>{
     useEffect(()=>{
         dispatch(setPage(1))
     },[])
+    useEffect(()=>{
+        setPages(1);
+    },[allPokemons])
     return(
         <div className={css.home}>
             <Navbar/>

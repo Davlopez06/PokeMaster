@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./Filter.module.css"
 import { useDispatch, useSelector } from "react-redux";
-import { filter, getAllTypes } from "../../redux/actions";
+import { filter, getAllTypes, setPage } from "../../redux/actions";
 import { useEffect } from "react";
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
@@ -23,6 +23,7 @@ const Filter=()=>{
     // setPag(1)
     console.log(type)
     dispatch(sortAlpha(type))
+    dispatch(setPage(1))
   };
 
   const handleDesAlpha = (type) => {
@@ -30,6 +31,7 @@ const Filter=()=>{
     // setPag(1)
     console.log(type)
     dispatch(sortAlpha(type))
+    dispatch(setPage(1))
   };
 
   const handleCreate = (type) => {
@@ -49,6 +51,7 @@ const Filter=()=>{
     // setPag(1)
     console.log(e)
     dispatch(filter(e))
+    dispatch(setPage(1))
   };
     return(
         <div className={css.content}>

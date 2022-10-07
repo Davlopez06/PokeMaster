@@ -44,8 +44,8 @@ const initialState = {
             let inicio=0;
             let pokemonsInitial=[];
             for (let i = ((action.payload-1)*9); i < (action.payload*9); i++) {
-                if(state.auxPokemons[i]){
-                    pokemonsInitial.push(state.auxPokemons[i])
+                if(state.allPokemons[i]){
+                    pokemonsInitial.push(state.allPokemons[i])
                 }
             }
             return{
